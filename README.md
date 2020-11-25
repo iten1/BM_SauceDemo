@@ -24,6 +24,3 @@ npx cypress open|run
 ```
 
 
-
-## Side Note:
-In this project, it generates one report for all scenarios
