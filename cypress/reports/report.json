@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-25T19:53:54.809Z",
+    "end": "2020-11-25T19:54:01.344Z",
+    "duration": 6535,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "663a0c57-4299-46ef-865c-3857112c1448",
+      "title": "",
+      "fullFile": "cypress\\integration\\09-CheckOutEmptyCart.spec.js",
+      "file": "cypress\\integration\\09-CheckOutEmptyCart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "963420e2-f4c7-44e3-8d5b-546587e42844",
+          "title": "Remove Products From Cart Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Login",
+              "fullTitle": "Remove Products From Cart Suite Should Login",
+              "timedOut": null,
+              "duration": 2670,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();",
+              "err": {},
+              "uuid": "f759b84d-e0da-4639-8aa1-c37f41152949",
+              "parentUUID": "963420e2-f4c7-44e3-8d5b-546587e42844",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Add Products",
+              "fullTitle": "Remove Products From Cart Suite Should Add Products",
+              "timedOut": null,
+              "duration": 297,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#inventory_container\").within(function () {\n  cy.contains(\"ADD TO CART\").eq(0).click();\n});\ncy.get(\".shopping_cart_badge\").then(function (counter) {\n  expect(counter.text()).not.to.be.empty;\n});",
+              "err": {},
+              "uuid": "f7c41cd6-d27b-47e2-aba9-8fadfc183dfe",
+              "parentUUID": "963420e2-f4c7-44e3-8d5b-546587e42844",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should View Cart Products",
+              "fullTitle": "Remove Products From Cart Suite Should View Cart Products",
+              "timedOut": null,
+              "duration": 286,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#shopping_cart_container\").click();",
+              "err": {},
+              "uuid": "1fbe92e3-de05-455a-9cb6-946daf42ab97",
+              "parentUUID": "963420e2-f4c7-44e3-8d5b-546587e42844",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Remove Product From Cart",
+              "fullTitle": "Remove Products From Cart Suite Should Remove Product From Cart",
+              "timedOut": null,
+              "duration": 145,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#cart_contents_container\").within(function () {\n  cy.contains(\"REMOVE\").click(); // cy.get(\".shopping_cart_badge\").then((counter)=>{\n  //     expect(counter.text()).to.be.empty;\n  // })\n});",
+              "err": {},
+              "uuid": "4fd3bc8d-d95b-4396-950a-0b192079bbd0",
+              "parentUUID": "963420e2-f4c7-44e3-8d5b-546587e42844",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Click on CheckOut Button",
+              "fullTitle": "Remove Products From Cart Suite Should Click on CheckOut Button",
+              "timedOut": null,
+              "duration": 299,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#cart_contents_container\").within(function () {\n  cy.contains(\"CHECKOUT\").click();\n});",
+              "err": {},
+              "uuid": "0ffb3062-6a4b-44e4-a5ac-569f08da82b2",
+              "parentUUID": "963420e2-f4c7-44e3-8d5b-546587e42844",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Fill CheckOut Form",
+              "fullTitle": "Remove Products From Cart Suite Should Fill CheckOut Form",
+              "timedOut": null,
+              "duration": 942,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#first-name\").type(\"Iten\");\ncy.get(\"#last-name\").type(\"Saad\");\ncy.get(\"#postal-code\").type(\"11742\");\ncy.get(\"#checkout_info_container\").within(function () {\n  cy.contains(\"CONTINUE\").click();\n  cy.url().should('include', 'checkout-step-two');\n});",
+              "err": {},
+              "uuid": "8f7823ef-ac9a-458a-8dfd-fd356ea4ef59",
+              "parentUUID": "963420e2-f4c7-44e3-8d5b-546587e42844",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Finish CheckOut ",
+              "fullTitle": "Remove Products From Cart Suite Should Finish CheckOut ",
+              "timedOut": null,
+              "duration": 314,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#checkout_summary_container\").within(function () {\n  cy.contains(\"FINISH\").click();\n  cy.url().should('include', 'checkout-complete');\n});",
+              "err": {},
+              "uuid": "016a94b8-b89d-487d-b54a-f586f31cc81b",
+              "parentUUID": "963420e2-f4c7-44e3-8d5b-546587e42844",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f759b84d-e0da-4639-8aa1-c37f41152949",
+            "f7c41cd6-d27b-47e2-aba9-8fadfc183dfe",
+            "1fbe92e3-de05-455a-9cb6-946daf42ab97",
+            "4fd3bc8d-d95b-4396-950a-0b192079bbd0",
+            "0ffb3062-6a4b-44e4-a5ac-569f08da82b2",
+            "8f7823ef-ac9a-458a-8dfd-fd356ea4ef59",
+            "016a94b8-b89d-487d-b54a-f586f31cc81b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4953,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
